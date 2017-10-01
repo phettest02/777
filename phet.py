@@ -125,27 +125,41 @@ def SEND_MESSAGE(op):
             if msg.contentType == 0:
                 if msg.text == "Mid":
                     sendMessage(msg.to, msg.to)
-                if msg.text == "Mme":
+                if msg.text == "Me":
                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
-                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
+                    sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
                     sendMessage(msg.to, text=None, contentMetadata={'mid': msg.from_}, contentType=13)
                 if msg.text == "Gift":
                     sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)
+                    sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)		
+                    sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)						
                 else:
                     pass
             else:
                 pass
         if msg.toType == 2:
             if msg.contentType == 0:
-                if msg.text == "Mmid":
+                if msg.text == "Mid":
                     sendMessage(msg.to, msg.from_)
                     sendMessage(msg.to, msg.from_)
                     sendMessage(msg.to, msg.from_)
                     sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)
+                    sendMessage(msg.to, msg.from_)			
                 if msg.text == "gid":
                     sendMessage(msg.to, msg.to)
                 if msg.text == "ginfo":
@@ -212,7 +226,7 @@ def SEND_MESSAGE(op):
                     client.inviteIntoGroup(msg.to, [key])
                     contact = client.getContact(key)
                     sendMessage(msg.to, ""+contact.displayName+" I invited you")
-                if msg.text == "me":
+                if msg.text == "Me":
                     M = Message()
                     M.to = msg.to
                     M.contentType = 13
